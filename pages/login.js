@@ -6,6 +6,7 @@ function Login({ providers }) {
             <img 
                 className='w-52 mb-5'
                 src="https://upload.wikimedia.org/wikipedia/commons/2/26/Spotify_logo_with_text.svg" 
+<<<<<<< HEAD
                 alt="for demonstration purposes" 
             />
 
@@ -16,6 +17,18 @@ function Login({ providers }) {
                         className='bg-[#18D860]  text-white p-5 rounded-full'>Login with {provider.name}</button>
                     </div>
             ))}
+=======
+                alt="" />
+        
+        {Object.values(providers).map((provider) => (
+            <div key={provider.name}>
+                <button 
+                    className='bg-[#18D860] text-white p-5 rounded-full'
+                    onClick={() => signIn(provider.id, { callbackUrl: "/"})}
+                    >Login with {provider.name}</button>
+            </div>
+        ))}
+>>>>>>> temp
 
         </div>
     );
